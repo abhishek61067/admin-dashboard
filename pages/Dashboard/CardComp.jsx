@@ -6,7 +6,7 @@ import {Card, Row, Col} from 'reactstrap'
 const CardComp = () => {
   return (
     <>
-    <Card className='credit-card-container overflow-hidden text-white bg-primary border-0'>
+    <Card className='credit-card-container overflow-hidden text-white bg-primary border-0 p-3'>
         <Row>
             <Col>
             <div>

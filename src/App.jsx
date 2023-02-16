@@ -12,11 +12,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import Header from './components/layout/header';
 import Footer from './components/layout/footer';
-
-
-
-
-
+import SideBarContainer from './components/layout/SideBarContainer';
 
 function App() {
 library.add(fas);
@@ -27,6 +23,7 @@ library.add(fas);
   <>
   <Router>
     <Header/>
+    <SideBarContainer/>
     <div className="main-content">
       <div className="page-content">
   <Dashboard/> 

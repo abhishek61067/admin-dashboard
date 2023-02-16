@@ -46,7 +46,8 @@ $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
     $success: #222222;
     $dark: #000;
 
-    $theme-colors: ("secondary": $secondary,
+    $theme-colors: (
+        "secondary": $secondary,
         "success": $success,
         "danger": $danger,
         "info": $indigo,
