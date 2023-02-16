@@ -1,7 +1,11 @@
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-router-dom";
+import { MenuContext } from '../../context/menu';
+
 
 const SideBar = () => {
+  const [{menuClass, isCollapsed}, toggleMenu] = React.useContext(MenuContext);
   return (
     <div className="h-100">
       <div id="sidebar-menu">
@@ -12,15 +16,15 @@ const SideBar = () => {
               <div className="menu-pill">
                 <FontAwesomeIcon icon="fa-solid fa-users" />
               </div>
-              <span>Users</span>
-            </Link>
+              {isCollapsed && <span>Users</span>}
+              </Link>
           </li>
           <li>
             <Link to="/calendar" className="menu-item py-3 text-sm my-0 mx-4 px-4 d-flex align-items-center">
               <div className="menu-pill">
                 <FontAwesomeIcon icon="fa-solid fa-calendar-days" />
               </div>
-              <span>Calendar</span>
+              {isCollapsed && <span>Calendar</span>}
             </Link>
           </li>
           <li>
@@ -28,7 +32,7 @@ const SideBar = () => {
               <div className="menu-pill">
                 <FontAwesomeIcon icon="fa-solid fa-cart-arrow-down" />
               </div>
-              <span>E-commerce</span>
+              {isCollapsed && <span>E-commerce</span>}
             </Link>
           </li>
           <li>
@@ -36,7 +40,7 @@ const SideBar = () => {
               <div className="menu-pill">
                 <FontAwesomeIcon icon="fa-solid fa-envelope" />
               </div>
-              <span>E-mail</span>
+              {isCollapsed && <span>E-mail</span>}
             </Link>
           </li>
         </ul>
