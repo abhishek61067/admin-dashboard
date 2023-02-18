@@ -27,7 +27,7 @@ library.add(fas);
     <div className={menuClass}>
 <Header/>
     <SideBarContainer/>
-    <div className="main-content">
+    <div className={isCollapsed?"main-content collapsed":"main-content"}>
       <div className="page-content">
         <Routes>
 <Route path="/" element={<Dashboard/>}/>

@@ -8,7 +8,7 @@ const SideBar = () => {
   const [{menuClass, isCollapsed}, toggleMenu] = React.useContext(MenuContext);
   return (
     <div className="h-100">
-      <div id="sidebar-menu">
+      <div id="sidebar-menu" className={isCollapsed?"collapsed":"not-collapsed"}>
         <ul className="list-unstyled" id="side-menu">
           <li className="menu-title mx-4 px-4">Menu</li>
           <li>
