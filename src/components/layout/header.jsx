@@ -8,7 +8,7 @@ const Header = () => {
   const [{isDark, theme}, toggleTheme] = useContext(ThemeContext);
   const [{menuClass, isCollapsed}, toggleMenu] = useContext(MenuContext);
   return (
-    <header id="page-topbar">
+    <header class={isCollapsed?"page-topbar collapsed": "page-topbar"}>
       <div className="navbar-header">
         <div className="d-flex w-100 justify-content-between">
           <div>

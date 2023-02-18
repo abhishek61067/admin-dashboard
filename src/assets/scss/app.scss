@@ -1,7 +1,13 @@
 @import "variables";
 
+
+
 body {
     background-color: var(--bs-body-bg);
+    width:100vw;
+    overflow:hidden;
+
+    
 }
 
 a {
@@ -119,19 +125,37 @@ a {
     padding: 0 calc(24px * 0.5) 0 0;
 }
 
-#page-topbar {
+.page-topbar {
     position: fixed;
     top: 0;
     right: 0;
-    left: 250px;
+    width:calc(100vw - 100px);
+    left:100px;
     z-index: 1002;
     background-color: var(--bs-container-bg);
     box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+    &.collapsed{
+        width:calc(100vw - 250px);
+        left:250px;
+    }
+    .header-navigation{
+        .theme-icon{
+            border:none;
+            background-color: rgba(0,0,0,0);
+        }
+        svg{
+            path{
+                fill: $primary;
+            }
+        }
+    }
 }
 
 .page-content {
     padding: calc(70px + 24px) calc(24px * 0.75) 60px calc(24px * 0.75);
 }
+
+
 
 .menu-item {
     border-radius: 0.5rem;
@@ -172,26 +196,31 @@ a {
 }
 
 .main-content {
-    margin-left: 250px;
+    margin-left: 100px;
+    width:90vw;
 
     &.collapsed {
-        margin-left: 70px;
+        margin-left: 20vw;
+        width:80vw;
     }
 }
 
-#sidebar-menu {
-    width: 250px;
+#sidebar-menu{
     bottom: 0;
-    margin-top: 0;
-    position: fixed;
-    top: 0;
-    padding-top: 70px;
-    background-color: var(--bs-container-bg);
-    box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+        margin-top: 0;
+        position: fixed;
+        top: 0;
+        padding-top: 70px;
+        background-color: var(--bs-container-bg);
+        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
 
-    &.collapsed {
-        width: 70px;
-    }
+}
+
+.collapsed {
+    width: 250px;
+    
+
+   
 }
 
 .menu {
@@ -216,3 +245,10 @@ a {
     box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
     border: none;
 }
+ .collapsed {
+     width: 250px;
+ }
+
+ .not-collapsed {
+     width: 100px;
+ }
