@@ -33,7 +33,7 @@ const series = [44, 55, 67, 83];
                 }
               },
               labels: ['Com', 'Mob', 'Lap', 'Ipad'],
-              colors:["#a855f7","#A0EADE", "#BFD2BF", "#3258F2" ]
+              colors:["#99ffff","#88ee88", "#BFD2BF", "#55aaff" ]
             };
           
             return (

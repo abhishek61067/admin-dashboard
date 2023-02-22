@@ -69,7 +69,7 @@ const reports = [
 <Card>
         <ColumnChart
                             periodData={periodData}
-                            dataColors={["#a855f7","#3258F2","#A0EADE"]}
+                            dataColors={["#88ee88","#0088aa","#bfd2bf"]}
                             />
                             </Card>
                         </Col>

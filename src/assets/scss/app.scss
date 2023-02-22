@@ -5,7 +5,8 @@
 body {
     background-color: var(--bs-body-bg);
     width:100vw;
-    overflow:hidden;
+    overflow:scroll;
+   
 
     
 }
@@ -19,7 +20,7 @@ a {
 /* Dashboard */
 .credit-card-container {
     background: rgb(50, 88, 242);
-    background: linear-gradient(90deg, #84D9FE, #A797FF);
+    background: linear-gradient(90deg, $primary, $secondary);
 
     p {
         margin-bottom: 0.25rem;
@@ -123,6 +124,8 @@ a {
     margin: 0 auto;
     height: 70px;
     padding: 0 calc(24px * 0.5) 0 0;
+    box-shadow: 5px 2px 3px 0px rgb(18 38 63 / 15%);
+                transition: all 0.5s ease;
 }
 
 .page-topbar {
@@ -134,11 +137,32 @@ a {
     z-index: 1002;
     background-color: var(--bs-container-bg);
     box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+        backdrop-filter: blur(50px);
+        transition: all 0.5s ease;
     &.collapsed{
         width:calc(100vw - 250px);
         left:250px;
     }
     .header-navigation{
+        .dropdown-menu--profile{
+            background-color: white;
+            left:-50px;
+            
+
+
+            &.isDark{
+                background-color: $primary;
+            }
+
+            span{
+                    &:hover {
+                            color: $primary;
+                            cursor: pointer;
+                        }
+                }
+            }
+        }
+
         .theme-icon{
             border:none;
             background-color: rgba(0,0,0,0);
@@ -149,7 +173,6 @@ a {
             }
         }
     }
-}
 
 .page-content {
     padding: calc(70px + 24px) calc(24px * 0.75) 60px calc(24px * 0.75);
@@ -198,10 +221,12 @@ a {
 .main-content {
     margin-left: 100px;
     width:90vw;
+    transition: all 0.5s ease;
 
     &.collapsed {
         margin-left: 20vw;
         width:80vw;
+        transition: margin-left 0.5s ease;
     }
 }
 
@@ -212,7 +237,10 @@ a {
         top: 0;
         padding-top: 70px;
         background-color: var(--bs-container-bg);
-        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 15%);
+        backdrop-filter: blur(10px);
+        height: fit-content;
+            transition: all 0.5s ease;
 
 }
 
@@ -226,11 +254,23 @@ a {
 .menu {
     width: 250px;
     position: fixed;
+    z-index:99;
+
+    .navbar{
+        position:relative;
+        z-index:99;
+
+    }
+
+    .h-100{
+        position: relative;
+        z-index:89;
+    }
 }
 
 .logo {
     font-weight: bold;
-    color: purple;
+    color: $primary;
 }
 
 /*Common */
