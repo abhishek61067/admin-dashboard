@@ -20,7 +20,7 @@ a {
 /* Dashboard */
 .credit-card-container {
     background: rgb(50, 88, 242);
-    background: linear-gradient(90deg, #84D9FE, #A797FF);
+    background: linear-gradient(90deg, $primary, $secondary);
 
     p {
         margin-bottom: 0.25rem;
@@ -124,7 +124,8 @@ a {
     margin: 0 auto;
     height: 70px;
     padding: 0 calc(24px * 0.5) 0 0;
-        box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
+    box-shadow: 5px 2px 3px 0px rgb(18 38 63 / 15%);
+                transition: all 0.5s ease;
 }
 
 .page-topbar {
@@ -137,6 +138,7 @@ a {
     background-color: var(--bs-container-bg);
     box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
         backdrop-filter: blur(50px);
+        transition: all 0.5s ease;
     &.collapsed{
         width:calc(100vw - 250px);
         left:250px;
@@ -219,10 +221,12 @@ a {
 .main-content {
     margin-left: 100px;
     width:90vw;
+    transition: all 0.5s ease;
 
     &.collapsed {
         margin-left: 20vw;
         width:80vw;
+        transition: margin-left 0.5s ease;
     }
 }
 
@@ -266,7 +270,7 @@ a {
 
 .logo {
     font-weight: bold;
-    color: purple;
+    color: $primary;
 }
 
 /*Common */
