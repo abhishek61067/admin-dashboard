@@ -14,8 +14,12 @@ import SideBarContainer from './components/layout/SideBarContainer';
 import { MenuContext } from './context/menu';
 import Users from '../pages/Users';
 
-
+// export const [dropdowns, setDropDowns] = useState("hide");
 function App() {
+  
+  // removeDropdowns = ()=>{
+  //   setDropDowns("hide")
+  // }
 library.add(fas);
 // library.add(fab);
   const [count, setCount] = useState(0);
@@ -24,7 +28,7 @@ library.add(fas);
   return (
   <>
   <Router>
-    <div className={menuClass}>
+    <div className={menuClass} >
 <Header/>
     <SideBarContainer/>
     <div className={isCollapsed?"main-content collapsed":"main-content"}>

@@ -5,7 +5,8 @@
 body {
     background-color: var(--bs-body-bg);
     width:100vw;
-    overflow:hidden;
+    overflow:scroll;
+   
 
     
 }
@@ -123,6 +124,7 @@ a {
     margin: 0 auto;
     height: 70px;
     padding: 0 calc(24px * 0.5) 0 0;
+        box-shadow: 0px 2px 5px rgb(0 0 0 / 10%);
 }
 
 .page-topbar {
@@ -134,11 +136,31 @@ a {
     z-index: 1002;
     background-color: var(--bs-container-bg);
     box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+        backdrop-filter: blur(50px);
     &.collapsed{
         width:calc(100vw - 250px);
         left:250px;
     }
     .header-navigation{
+        .dropdown-menu--profile{
+            background-color: white;
+            left:-50px;
+            
+
+
+            &.isDark{
+                background-color: $primary;
+            }
+
+            span{
+                    &:hover {
+                            color: $primary;
+                            cursor: pointer;
+                        }
+                }
+            }
+        }
+
         .theme-icon{
             border:none;
             background-color: rgba(0,0,0,0);
@@ -149,7 +171,6 @@ a {
             }
         }
     }
-}
 
 .page-content {
     padding: calc(70px + 24px) calc(24px * 0.75) 60px calc(24px * 0.75);
@@ -212,7 +233,10 @@ a {
         top: 0;
         padding-top: 70px;
         background-color: var(--bs-container-bg);
-        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 3%);
+        box-shadow: 0 0.75rem 1.5rem rgb(18 38 63 / 15%);
+        backdrop-filter: blur(10px);
+        height: fit-content;
+            transition: all 0.5s ease;
 
 }
 
@@ -226,6 +250,18 @@ a {
 .menu {
     width: 250px;
     position: fixed;
+    z-index:99;
+
+    .navbar{
+        position:relative;
+        z-index:99;
+
+    }
+
+    .h-100{
+        position: relative;
+        z-index:89;
+    }
 }
 
 .logo {
